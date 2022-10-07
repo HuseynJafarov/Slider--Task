@@ -22,12 +22,14 @@ namespace Front_Back.Controllers
         public IActionResult Index()
         {
             List<Slider> sliders = _context.Sliders.ToList();
-            List<Image> images = _context.Images.ToList();
+            Image images = _context.Images.FirstOrDefault();
+            IEnumerable<Work> works = _context.Works.ToList();
 
             HomeVM model = new HomeVM
             {
                 Sliders = sliders,
-                Images = images
+                Images = images,
+                Works = works
             };
 
             return View(model);

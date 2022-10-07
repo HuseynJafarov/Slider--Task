@@ -16,6 +16,7 @@ namespace Front_Back.Data
 
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Work> Works { get; set; }
 
 
 
